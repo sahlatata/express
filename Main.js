@@ -14,11 +14,11 @@ if ( jour ==6 || jour==0 || hours<9 || hours >=17)
 }
 // console.log(`${d} ${jour} Nous sommes le ${day} il est ${hours} heures et ${minutes} minutes`);
 
-
+app.use(middleware)
 app.get('/',(req,res)=>{
 res.sendFile(__dirname+'/Public/Home.html')
 })
 
-app.use(middleware)
+
 app.use(express.static('public'));
 app.listen(port,console.log(`le serveur marche sur le port : ${port}` ))
